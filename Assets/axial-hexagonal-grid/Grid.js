@@ -22,8 +22,8 @@ function getCenterWorldPoint (axial : Axial) : Vector2 {
 };
 
 function worldPointToAxial (x : float, y : float) : Axial {
-  var axial = worldPointToAxialDecimal(x, y);
-  var cube = axial.toCube();
+  var axialDecimal = worldPointToAxialDecimal(x, y);
+  var cube = axialDecimal.toCube();
   var roundedCube = cube.round();
 
   return Axial(roundedCube.x, roundedCube.y);
